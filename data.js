@@ -1,25 +1,91 @@
-let games = [
-    {id: '1', title: 'Zelda, Tears of the Kingdom', platform: ['Switch']},
-    {id: '2', title: 'Final Fantasy 7 Remake', platform: ['PS5', 'Xbox']},
-    {id: '3', title: 'Elden Ring', platform: ['PS5', 'Xbox', 'PC']},
-    {id: '4', title: 'Mario Kart', platform: ['Switch']},
-    {id: '5', title: 'Pokemon Scarlet', platform: ['PS5', 'Xbox', 'PC']},
-  ]
-  
-  let authors = [
-    {id: '1', name: 'mario', verified: true},
-    {id: '2', name: 'yoshi', verified: false},
-    {id: '3', name: 'peach', verified: true},
-  ]
-  
-  let reviews = [
-    {id: '1', rating: 9, content: 'lorem ipsum', author_id: '1', game_id: '2'},
-    {id: '2', rating: 10, content: 'lorem ipsum', author_id: '2', game_id: '1'},
-    {id: '3', rating: 7, content: 'lorem ipsum', author_id: '3', game_id: '3'},
-    {id: '4', rating: 5, content: 'lorem ipsum', author_id: '2', game_id: '4'},
-    {id: '5', rating: 8, content: 'lorem ipsum', author_id: '2', game_id: '5'},
-    {id: '6', rating: 7, content: 'lorem ipsum', author_id: '1', game_id: '2'},
-    {id: '7', rating: 10, content: 'lorem ipsum', author_id: '3', game_id: '1'},
-  ]
-  
-  export default { games, authors, reviews }
+const UserList = [
+  {
+    id: 1,
+    name: "John",
+    username: "john",
+    age: 20,
+    nationality: "CANADA",
+    friends: [
+      {
+        id: 2,
+        name: "Pedro",
+        username: "PedroTech",
+        age: 20,
+        nationality: "BRAZIL",
+      },
+      {
+        id: 5,
+        name: "Kelly",
+        username: "kelly2019",
+        age: 5,
+        nationality: "CHILE",
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Pedro",
+    username: "PedroTech",
+    age: 20,
+    nationality: "BRAZIL",
+  },
+  {
+    id: 3,
+    name: "Sarah",
+    username: "cameron",
+    age: 25,
+    nationality: "INDIA",
+    friends: [
+      {
+        id: 2,
+        name: "Pedro",
+        username: "PedroTech",
+        age: 20,
+        nationality: "BRAZIL",
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "Rafe",
+    username: "rafe123",
+    age: 60,
+    nationality: "GERMANY",
+  },
+  {
+    id: 5,
+    name: "Kelly",
+    username: "kelly2019",
+    age: 5,
+    nationality: "CHILE",
+  },
+];
+
+const MovieList = [
+  {
+    id: 1,
+    name: "Avengers Endgame",
+    yearOfPublication: 2019,
+    isInTheaters: true,
+  },
+  {
+    id: 2,
+    name: "Interstellar",
+    yearOfPublication: 2007,
+    isInTheaters: true,
+  },
+  {
+    id: 3,
+    name: "Superbad",
+    yearOfPublication: 2009,
+    isInTheaters: true,
+  },
+  {
+    id: 4,
+    name: "PedroTech The Movie",
+    yearOfPublication: 2035,
+    isInTheaters: false,
+  },
+];
+
+export default { UserList, MovieList };

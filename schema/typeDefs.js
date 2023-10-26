@@ -1,25 +1,34 @@
 const typeDefs = `#graphql
-    type Game {
-        id: ID!,
-        title: String!,
-        platform: [String!]!
-    }
-    type Review {
-        id: ID!
-        rating: Int!
-        content: String!
-    }
-    type Author {
+    type User{
         id: ID!
         name: String!
-        verified: Boolean!
+        username: String!
+        age: Int!
+        nationality: Nationality!
+        friends: [User]
     }
+    type Movie {
+        id: ID 
+        name: String!
+        yearOfPublication: Int!
+        isInTheaters: Boolean
+    }
+    
     type Query {
-        games: [Game]
-        reviews: [Review]
-        review(id: ID!) : Review
-        authors: [Author]
+        users: [User!]!
+        user(id: ID): User
+        movies: [Movie!]!
+        movie(name: String!): Movie
     }
+
+    enum Nationality {
+        CANADA
+        BRAZIL
+        INDIA
+        GERMANY
+        CHILE
+        UKRAINE
+   }
 `;
 
 export default typeDefs;
