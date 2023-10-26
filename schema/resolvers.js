@@ -27,6 +27,19 @@ const resolvers = {
       return movie;
     },
   },
+
+  User: {
+    favoriteMovies: (user) => {
+      const startYear = 2005;
+      const endYear = 2023;
+
+      return data.MovieList.filter(
+        (movie) =>
+          movie.yearOfPublication >= startYear &&
+          movie.yearOfPublication <= endYear
+      );
+    },
+  },
 };
 
 export default resolvers;
